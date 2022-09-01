@@ -1,0 +1,3 @@
+#!/bon/bash
+ls -map
+sort -b
