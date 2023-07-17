@@ -8,9 +8,9 @@ sudo ufw default allow outgoing
 sudo ufw default deny incoming
 
 # configure
-sudo ufw allow ssh
-sudo ufw allow http
-sudo ufw allow https
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
 
 # start
 sudo ufw enable
