@@ -25,7 +25,9 @@ def export_to_json():
         """export to json"""
         t = []
         for task in TASK_STATUS_TITLE:
-            t.append({"task": task[1], "completed": task[0], "username": USERNAME})
+            t.append({"task": task[1],
+                      "completed": task[0],
+                      "username": USERNAME})
         data = {str(argv[1]): t}
         filename = "{}.json".format(argv[1])
         with open(filename, "w") as f:

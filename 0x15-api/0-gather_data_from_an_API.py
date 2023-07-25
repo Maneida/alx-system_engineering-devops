@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Request API; Returns returns information about employee TODO list 
+Request API; Returns returns information about employee TODO list
 progress given the employee ID
 """
 import requests
@@ -23,11 +23,11 @@ def get_todo_progress():
             if t.get('userId') == int(argv[1]):
                 TOTAL_NUM_OF_TASKS += 1
                 if t.get('completed') is True:
-                        NUMBER_OF_DONE_TASKS += 1
-                        TASK_TITLE.append(t.get('title'))
-        print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
-                                                            NUMBER_OF_DONE_TASKS,
-                                                            TOTAL_NUM_OF_TASKS))
+                    NUMBER_OF_DONE_TASKS += 1
+                    TASK_TITLE.append(t.get('title'))
+        print("Employee {} is done with tasks({}/{}):".format(
+            EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUM_OF_TASKS)
+              )
         for task in TASK_TITLE:
             print("\t {}".format(task))
 
